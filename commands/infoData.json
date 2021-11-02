@@ -1,0 +1,44 @@
+[
+    {
+        "name" : "Daniel",
+        "nick" : "IT(t)",
+        "year" : "IT20",
+        "post" : "IT-ansvarig",
+        "quote" : "This is a very good citat"
+    },
+    {
+        "name" : "Markus",
+        "nick" : "league",
+        "year" : "K20",
+        "post" : "Vice/kassör",
+        "quote" : "This is a very good citat"
+    },
+    {
+        "name" : "Lisa",
+        "nick" : "AFK",
+        "year" : "K19",
+        "post" : "Ordförande",
+        "quote" : "This is a very good citat"
+    },
+    {
+        "name" : "Lukas",
+        "nick" : "Bit",
+        "year" : "K19",
+        "post" : "Vad är det?",
+        "quote" : "This is a very good citat"
+    },
+    {
+        "name" : "Isak",
+        "nick" : "RNG",
+        "year" : "K18",
+        "post" : "Brädspelsvurmare och allmänt talanglös hjälpreda",
+        "quote" : "This is a very good citat"
+    },
+    {
+        "name" : "Eva",
+        "nick" : "Crit",
+        "year" : "K18",
+        "post" : "PRo-gamer",
+        "quote" : "This is a very good citat"
+    }
+]

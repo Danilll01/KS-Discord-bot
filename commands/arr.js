@@ -7,7 +7,7 @@ module.exports = {
             title: 'KS Minecraft arr!',
             description: 'Detta arret är ett nice arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr',
             thumbnail: {
-                url: 'https://github.com/Danilll01/KSquotes/blob/main/img/KS_officiell_logga.png?raw=true',
+                url: 'https://github.com/Danilll01/KSquotes/img/KS_officiell_logga.png',
             },
             fields: [
                 {
