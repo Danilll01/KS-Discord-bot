@@ -15,6 +15,8 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.4.0",
     "node-opus": "^0.3.3",
+    "xhr2": "^0.2.1",
+    "xmlhttprequest": "^1.8.0",
     "ytdl-core": "^4.9.1"
   },
   "devDependencies": {
