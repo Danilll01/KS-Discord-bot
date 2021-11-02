@@ -1,5 +1,9 @@
 // Require file system
 const fs = require('fs');
+var pathToFfmpeg = require('ffmpeg-static');
+
+//import {playMusic, skip, stop} from './musicBot.js';
+const musicBot = require('./musicBot.js');
 
 // Require the discord.js module
 const Discord = require('discord.js');
@@ -29,12 +33,33 @@ client.login(process.env.TOKEN);
 // Prefix
 const prefix = "?"
 
+// Queue for music
+const queue = new Map();
+
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
 
+
+    const serverQueue = queue.get(message.guild.id);
+
+    // Music commands
+    if (command === 'play') {
+        return musicBot.playMusic(message, serverQueue);
+    } else if (command === 'skip') {
+        musicBot.skip(message, serverQueue);
+        return;
+    } else if (command === 'stop') {
+        musicBot.stop(message, serverQueue);
+        return;
+    } else if (command === 'hejdå') {
+        message.content = "?play https://www.youtube.com/watch?v=-Ajrz3JPig0";
+        return musicBot.playMusic(message, serverQueue)
+    }
+
+    // If command don't exist return.
     if (!client.commands.has(command)) return;
 
     try {
