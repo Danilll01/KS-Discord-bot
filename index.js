@@ -47,7 +47,7 @@ client.on('message', message => {
 
     // Music commands
     if (command === 'play') {
-        return musicBot.playMusic(message, serverQueue);
+        return musicBot.playMusic(message, serverQueue, queue);
     } else if (command === 'skip') {
         musicBot.skip(message, serverQueue);
         return;
@@ -56,7 +56,24 @@ client.on('message', message => {
         return;
     } else if (command === 'hejdå') {
         message.content = "?play https://www.youtube.com/watch?v=-Ajrz3JPig0";
-        return musicBot.playMusic(message, serverQueue)
+        return musicBot.playMusic(message, serverQueue, queue)
+    } else if (command === 'queue') {
+        return musicBot.queue(message, serverQueue);
+    }
+
+    if (command === 'help') {
+        let helpEmbed = {
+            color: 0x0099ff,
+            title: 'Help commands',
+            description: 'This is an explanation of all commands',
+            fields: [],
+        };
+        // Add commands to message
+        client.commands.forEach(command => {
+            helpEmbed.fields.push({ name: command.name, value: command.description});
+        });
+        
+        message.channel.send({ embed: helpEmbed });
     }
 
     // If command don't exist return.
