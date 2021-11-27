@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const got = require('got');
 const axios = require('axios');
 
 const baseURL = "https://www.reddit.com/r/";
@@ -15,7 +14,7 @@ module.exports = {
 		.then(response => {
 			const posts = response.data.data.children;
             var post;
-            
+
             do {
                 post = posts[Math.floor(Math.random() * (posts.length-1))];
                 console.log(post.data.over_18);
